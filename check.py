@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import requests
 import os
+from langchain_community.vectorstores import FAISS
 
 
 load_dotenv()
@@ -75,12 +76,10 @@ def search_documentation(url_doc, keyword):
     embedding_model = HuggingFaceEmbeddings(model_name=model)
     domain = urlparse(url_doc).netloc
     
-    db = Chroma.from_texts(
+    db = FAISS.from_texts(
         texts=link_href,
-        embedding=embedding_model,
-        persist_directory=None
+        embedding=embedding_model
     )
-    print(db._collection.count())
     print('Banco de dados criado com sucesso.')
 
     # if not os.path.exists(domain):
