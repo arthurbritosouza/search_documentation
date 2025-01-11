@@ -1,0 +1,6 @@
+__pycache__
+.venv
+teste_v
+.env
+bs4.ipynb
+documentation.py
