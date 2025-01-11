@@ -7,7 +7,7 @@ from dotenv import load_dotenv
 from bs4 import BeautifulSoup
 import requests
 import os
-from langchain_community.vectorstores import FAISS
+from langchain.vectorstores import FAISS
 
 
 load_dotenv()
