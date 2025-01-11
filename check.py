@@ -1,7 +1,3 @@
-import pysqlite3  # Substitui o módulo sqlite3 por pysqlite3
-import sys
-sys.modules["sqlite3"] = pysqlite3
-
 from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface import HuggingFaceEmbeddings
