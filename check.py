@@ -2,7 +2,6 @@ from langchain.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_huggingface import HuggingFaceEmbeddings
 from langchain.prompts import PromptTemplate
-from langchain_chroma import Chroma
 from urllib.parse import urlparse
 from dotenv import load_dotenv
 from bs4 import BeautifulSoup
